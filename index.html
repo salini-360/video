@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Creative Reel Outro</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow:hidden;
+    font-family:Arial,sans-serif;
+}
+
+html, body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+.scene{
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    position:relative;
+
+    background:
+    linear-gradient(
+        135deg,
+        #111827,
+        #0f172a,
+        #020617
+    );
+
+    position:relative;
+}
+
+
+.scene{
+    max-width:100%;
+}
+/* Cards */
+
+.card{
+    position:absolute;
+
+    width:220px;
+    height:380px;
+
+    left:50%;
+    top:50%;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    border:3px solid white;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.5);
+
+    transform-origin:center;
+
+    opacity:0;
+}
+
+.card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Card Animations */
+
+.card1{
+    animation:card1 6s forwards;
+}
+
+.card2{
+    animation:card2 6s forwards;
+}
+
+.card3{
+    animation:card3 6s forwards;
+}
+
+@keyframes card1{
+
+    0%{
+        opacity:0;
+        transform:
+        translate(-50%,150%);
+    }
+
+    20%{
+        opacity:1;
+        transform:
+        translate(-50%,-50%)
+        rotate(-12deg);
+    }
+
+    70%{
+        opacity:1;
+        transform:
+        translate(-50%,-50%)
+        rotate(-12deg);
+    }
+
+    100%{
+        opacity:0;
+    }
+}
+
+@keyframes card2{
+
+    0%,15%{
+        opacity:0;
+    }
+
+    35%{
+        opacity:1;
+        transform:
+        translate(-50%,-50%)
+        rotate(0deg);
+    }
+
+    70%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+    }
+}
+
+@keyframes card3{
+
+    0%,30%{
+        opacity:0;
+    }
+
+    50%{
+        opacity:1;
+        transform:
+        translate(-50%,-50%)
+        rotate(12deg);
+    }
+
+    70%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+    }
+}
+
+/* CTA */
+
+.cta{
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:
+    translate(-50%,-50%)
+    scale(.5);
+
+    text-align:center;
+
+    opacity:0;
+
+    animation:
+    showCTA 1s forwards;
+    animation-delay:5s;
+}
+/* Cards */
+
+.card{
+    position:absolute;
+    .card{
+    width:180px;
+    height:320px;
+}
+    left:50%;
+    top:50%;
+
+    border-radius:20px;
+}
+
+/* CTA */
+
+.cta{
+    width:90%;
+    max-width:400px;
+}
+
+.big{
+    font-size:clamp(1.8rem,9vw,3.5rem);
+    line-height:1.1;
+}
+
+.small{
+    margin-top:15px;
+    font-size:clamp(.9rem,4vw,1.1rem);
+    line-height:1.5;
+    padding:0 10px;
+}
+
+.button{
+    margin-top:25px;
+    padding:16px 28px;
+    font-size:.95rem;
+}
+
+.handle{
+    margin-top:16px;
+    font-size:.9rem;
+    letter-spacing:2px;
+}
+
+@keyframes showCTA{
+
+    to{
+        opacity:1;
+        transform:
+        translate(-50%,-50%)
+        scale(1);
+    }
+}
+
+.big{
+    font-size:clamp(2rem,8vw,4rem);
+    font-weight:900;
+    color:white;
+    text-transform:uppercase;
+}
+
+.gold{
+    color:#FFD700;
+}
+
+.small{
+    margin-top:20px;
+    color:#ddd;
+    font-size:1rem;
+}
+
+.button{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    padding:18px 40px;
+
+    background:#FFD700;
+
+    color:#111;
+
+    border-radius:50px;
+
+    font-weight:800;
+
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+
+    50%{
+        transform:scale(1.08);
+    }
+}
+
+.handle{
+
+    margin-top:20px;
+
+    color:white;
+
+    letter-spacing:3px;
+}
+
+/* Floating Glow */
+
+.glow{
+    
+    position:absolute;
+    width:300px;
+    height:300px;
+    max-width:80vw;
+    max-height:80vw;
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        rgba(255,215,0,.4),
+        transparent 70%
+    );
+
+    left:50%;
+    top:50%;
+
+    transform:
+    translate(-50%,-50%);
+
+    animation:spin 10s linear infinite;
+}
+
+@keyframes spin{
+
+    from{
+        transform:
+        translate(-50%,-50%)
+        rotate(0deg);
+    }
+
+    to{
+        transform:
+        translate(-50%,-50%)
+        rotate(360deg);
+    }
+}
+@media (max-width:700px){
+
+    .card{
+        width:120px;
+        height:210px;
+    }
+
+    .glow{
+        width:220px;
+        height:220px;
+    }
+
+    .cta{
+        width:90%;
+        max-width:300px;
+
+        left:50%;
+        top:58%;
+    }
+
+    .big{
+        font-size:1.6rem;
+        line-height:1.1;
+    }
+
+    .gold{
+        display:block;
+        margin-top:4px;
+    }
+
+    .small{
+        margin-top:12px;
+        font-size:.85rem;
+        line-height:1.4;
+        padding:0;
+    }
+
+    .button{
+        margin-top:18px;
+        padding:12px 22px;
+        font-size:.85rem;
+    }
+
+    .handle{
+        margin-top:12px;
+        font-size:.75rem;
+        letter-spacing:1px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="scene">
+
+    <div class="glow"></div>
+
+    <div class="card card1">
+        <img src="img1.jpeg">
+    </div>
+
+    <div class="card card2">
+        <img src="img2.jpeg">
+    </div>
+
+    
+
+    <div class="cta">
+
+        <div class="big">
+            YOUR BUSINESS
+            <span class="gold">DESERVES THIS</span>
+        </div>
+
+        <div class="small">
+Stand out online and attract more customers today
+</div>
+        <div class="button">
+            📩 DM ME NOW
+        </div>
+
+        <div class="handle">
+            @saliniwebworks
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
